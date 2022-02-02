@@ -14,8 +14,8 @@ setuptools.setup(
     classifiers=[],
     python_requires=">=3.6",
     install_requires=[
-        "streamlit >= 0.63",
-        "numpy==1.20.0",
-        "matplotlib==3.3.4",
+        "streamlit >= 0.76",
+        "numpy",
+        "matplotlib",
     ],
 )
