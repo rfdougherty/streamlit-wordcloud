@@ -107,3 +107,18 @@ $ npm run start  # Start the Webpack dev server
 $ .venv/bin/activate  # activate the venv you created earlier
 $ streamlit run streamlit_wordcloud/streamlit_wordcloud.py  # run the wordcloud app
 ```
+
+### Deploying a production build
+Refresh the javascript frontend:
+```
+cd streamlit_wordcloud/frontend/
+npm install
+npm run build
+cd ../..
+```
+
+Then build the wheel (make sure you are in the top-leve dir where setup.py lives):
+```
+python3 -m build
+```
+If you want to make the updates available to install from github, be sure to commit the updated files (e.g., in dist). 
