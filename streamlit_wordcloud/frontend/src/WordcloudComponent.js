@@ -112,8 +112,9 @@ const WordcloudComponent = (props) => {
   const callbacks = {
     getWordColor: perWordColoring? getWordColor:undefined,
     onWordClick: (word) => onWordClicked(word),
-    onWordMouseOver: (word) => onWordHovered(word),
-    onWordMouseOut: (word) => onWordHovered(null),
+    // RFD: https://github.com/rezaho/streamlit-wordcloud/issues/2
+    //onWordMouseOver: (word) => onWordHovered(word),
+    //onWordMouseOut: (word) => onWordHovered(null),
     getWordTooltip: (word) => formatTooltipLayout(word),
 
   }
